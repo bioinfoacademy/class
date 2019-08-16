@@ -3,7 +3,7 @@
 use LWP::Simple;
 
 #search term to find
-$search_term = "breast cancer";
+$search_term = "hiv entry";
 
 #replace space with +
 $search_term =~ s/\s/+/g;
@@ -40,7 +40,7 @@ unlink "abstracts.txt";
 #loop through all the ids
 foreach $id (@ids)
 	{
-	#print "$id\n";
+	print "$id\n";
 	#get abstract for each pubmed id
 	$fetchurl = $base."efetch.fcgi?db=pubmed&id=$id&retmode=text&rettype=abstract";
 	#print get($fetchurl);
@@ -48,6 +48,7 @@ foreach $id (@ids)
 	open(OUTFILE,'>>','abstracts.txt');
 	#get the results and print to the filehandle
 	print OUTFILE get($fetchurl);
+    sleep 1;
 	#close file
 	close OUTFILE;
 	}
