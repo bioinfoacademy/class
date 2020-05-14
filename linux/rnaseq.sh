@@ -12,7 +12,7 @@ cd ~/Desktop/linux/advanced/rnaseq/
 ##14.1. Step1: Run FASTQC for our input files
 fastqc fastq/*.fastq
 
-##14.2. Step2: Build index
+##14.2. Step2: Build index - already created for you
 cd index
 bowtie-build mm9_chr1.fa mm9_chr1
 cd ..
