@@ -2,7 +2,7 @@
 
 #echo "Hello world"
 
-HELLO="Hello hello everyone"
+HELLO="Hello vijay"
 
 echo $HELLO
 
